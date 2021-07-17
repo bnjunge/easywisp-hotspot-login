@@ -1,0 +1,53 @@
+{
+  "name":"hotspotlogin",
+  "description":"Use this to Update your price and Logos on the customer interface.",
+  "title": "Bawa WiFi Login",
+  "wifi_name": "easyWiFi",
+  "developers": "Surv Technologies",
+  "server": "",
+  "logo": "ezlogo.png",
+  "lnmoapi": "https://dpc.survtechnologies.co.ke/api/",
+  "shortcode": "4036899",
+  "paybill": 1,
+  "paybill_no": "4036899",
+  "quota": [
+    {
+      "quota_limit": "80MB",
+      "price": "10",
+      "duration_limit": "",
+      "color": "green"
+    },
+    {
+      "quota_limit": "200MB",
+      "price": "20",
+      "duration_limit": "",
+      "color": "blue"
+    },
+    {
+      "quota_limit": "1GB",
+      "price": "100",
+      "duration_limit": "",
+      "color": "red"
+    }
+  ],
+  "duration": [
+    {
+      "quota_limit": "",
+      "price": "15",
+      "duration_limit": "1Hr Unlimited",
+      "color": "purple"
+    },
+    {
+      "quota_limit": "",
+      "price": "49",
+      "duration_limit": "12Hrs Unlimited",
+      "color": "black"
+    },
+    {
+      "quota_limit": "",
+      "price": "99",
+      "duration_limit": "24Hrs Unlimited",
+      "color": "red"
+    }
+  ]
+}

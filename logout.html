@@ -1,0 +1,122 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Giganet > Success Login</title>
+	$(if refresh-timeout)
+	<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+	$(endif)
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="expires" content="-1">
+	<link rel="shortcut icon" type="image/ico" href="icon.png" />
+	<style type="text/css">
+		<!--
+		textarea,
+		input,
+		select {
+			background-color: #FDFBFB;
+			border: 1px #BBBBBB solid;
+			padding: 2px;
+			margin: 1px;
+			font-size: 14px;
+			color: #808080;
+		}
+
+		.tabula {
+			border-width: 1px;
+			border-collapse: collapse;
+			border-color: #c1c1c1;
+			background-color: transparent;
+			font-family: verdana;
+			font-size: 11px;
+		}
+
+		body {
+			color: #737373;
+			font-size: 12px;
+			font-family: verdana;
+		}
+
+		a,
+		a:link,
+		a:visited,
+		a:active {
+			color: #AAAAAA;
+			text-decoration: none;
+			font-size: 12px;
+		}
+
+		a:hover {
+			border-bottom: 1px dotted #c1c1c1;
+			color: #AAAAAA;
+		}
+
+		img {
+			border: none;
+		}
+
+		td {
+			font-size: 12px;
+			padding: 4px;
+		}
+
+
+		</style><script language="JavaScript">< !--$(if advert - pending == 'yes') var popup = '';
+
+			function focusAdvert() {
+				if (window.focus) popup.focus();
+			}
+
+			function openAdvert() {
+				popup = open('$(link-advert)', 'hotspot_advert', '');
+				setTimeout("focusAdvert()", 1000);
+			}
+
+			$(endif) function openLogout() {
+				if (window.name != 'hotspot_status') return true;
+				open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+				window.close();
+				return false;
+			}
+
+			//
+			-->
+		</script>
+</head>
+
+<body bottommargin="0" topmargin="0" leftmargin="0" rightmargin="0" $(if advert-pending=='yes' ) onLoad="openAdvert()"
+	$(endif)>
+	<!-- <p style="text-align: center;">
+<img src="logo.png" width="60">
+</p> -->
+	<p style="text-align: center;">
+		<img src="logout.png" width="150" style="margin: 15% 0 10px 0;">
+	</p>
+	<h3 style="text-align: center;">You just Logged Out!</h3>
+	<p style="text-align: center; padding: 10px; margin: 3px; margin: 0 10px 0 10px;">You can now reconnect to <span
+			id="wifi_name"></span>
+		anytime.</p>
+	<p style="text-align: center; padding: 10px; margin: 0; background: #c70303; color: #fff;">Current Data Balance
+		is<strong> $(remain-bytes-total-nice).</strong></p>
+	<br>
+	<p
+		style="text-align: center; padding: 10px; background: #c70303; color: #ffffff; width: 40%; border-radius: 50px; margin: 5px auto;">
+		<a style="text-decoration: none; display: block; color: #fff; cursor: pointer;" href="login.html">Login
+			Again</a>
+	</p>
+
+	<script src="jquery.min.js"></script>
+	<script src="swal.js"></script>
+
+	<script>
+			$(function () {
+				var title;
+				$.getJSON("prices.json", function (data) {
+					$("title, #wifi_name").text(data.title)
+				})
+			})
+	</script>
+</body>
+
+</html>
