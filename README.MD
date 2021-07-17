@@ -29,7 +29,7 @@ Open ```prices.json```
 ### To edit this ad add your pricing and quotas, here is the guide<br />
 ```quota_limit```  ``[Required]``- Quota Allocation that user will get. SHould be in MB, GB, TB etc<br />
 ```price``` - How much users should pay eg 10, 20, 400 etc<br />
-```duration_limit``` ``[Optional]`` Time will take to expire bundles whether used or unused.
+```duration_limit``` ``[Optional]`` Time will take to expire bundles whether used or unused.<br />
 ```color``` ``[Required]`` - String - from supported colors
 
 ### To edit this ad add your pricing and Time Limits, here is the guide<br />
@@ -49,4 +49,4 @@ Price, color refers to the same as the one on quotas
 - black
 - gray
 
-```server`` is reserved for notifications set on easyWiSP dashboard.
+```server``` is reserved for notifications set on easyWiSP dashboard.
