@@ -307,7 +307,7 @@
       $.getJSON("prices.json", function (data) {
 
         if (data) {
-          const quota = data.quota, limit = data.quota_2
+          const quota = data.quota, limit = data.duration
           server = data.server
           lnmolink = data.lnmoapi
           shortcode = data.shortcode
