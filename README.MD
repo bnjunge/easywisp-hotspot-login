@@ -50,3 +50,9 @@ Price, color refers to the same as the one on quotas
 - gray
 
 ```server``` is reserved for notifications set on easyWiSP dashboard.
+
+
+### Adding More products than 6
+1. Create product on proces.json file under a different category
+2. Update the product category on login.html file
+3. Copy & edit the file to update the UI automatically

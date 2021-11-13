@@ -272,6 +272,7 @@
       <div>
         <div id="price_quota" class="flex justify-center"></div>
         <div id="time_limit" class="flex justify-center"></div>
+        <div id="product_category_2" class="flex justify-center"></div>
       </div>
       <div class="md:w-2/3 mx-auto flex flex-col border-2 border-white mt-5 rounded">
         <p class="text-white text-center mt-4"><small>Tap Data above and enter phone number to pay</small></p>
@@ -307,7 +308,10 @@
       $.getJSON("prices.json", function (data) {
 
         if (data) {
-          const quota = data.quota, limit = data.duration
+          const quota = data.quota, limit = data.duration, 
+          // added this 
+          product_category_2 = data.product_category_2
+
           server = data.server
           lnmolink = data.lnmoapi
           shortcode = data.shortcode
@@ -330,6 +334,19 @@
                 </div>
               `)
           })
+          // Options More Data
+          // copy paste and change this data_q to product_category_2 if data, or if unlimited, use the time_limit
+          // quota.map((product_category_2) => {
+          //   $("#price_quota").append(`
+          //       <div onclick="dvalue(${data_q.price})" class="bg-${data_q.color}-600 ring ring-${data_q.color}-600 ring-offset-2 border-2 px-1 py-1 h-28 w-28 shadow rounded-full text-white flex flex-col justify-center items-center hover:bg-gray-700">
+          //         <h1 class="text-4xl font-bold">${data_q.price}/-</h1>
+          //         <p class="font-bold px-0 leading-3">
+          //           <small>${data_q.quota_limit}</small>
+          //         </p>
+          //         <p class="text-xs py-0 leading-3"><small>Max 2Mbps</small></p>
+          //       </div>
+          //     `)
+          // })
 
           limit.map((limit_data) => {
             $("#time_limit").append(`
@@ -342,7 +359,21 @@
                   </div>
               `)
           })
+          // Option More Unlimited
+          limit.map((product_category_2) => {
+            $("#product_category_2").append(`
+                  <div onclick="dvalue(${limit_data.price})" class="bg-${limit_data.color}-600 ring ring-${limit_data.color}-600 ring-offset-2 border-2 px-1 py-1 h-28 w-28 shadow rounded-full text-white flex flex-col justify-center items-center hover:bg-gray-700">
+                    <h1 class="text-4xl font-bold">${limit_data.price}/-</h1>
+                    <p class="font-bold px-0 leading-3">
+                      <small>${limit_data.quota_limit}</small>
+                    </p>
+                    <p class="text-xs py-0 leading-3"><small>Max 2Mbps</small></p>
+                  </div>
+              `)
+          })
         }
+
+        // thats all, the UI will update with new values...
       })
 
       $("#buy-form").on('click', function (ev) {

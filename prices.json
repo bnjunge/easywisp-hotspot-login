@@ -49,5 +49,25 @@
       "duration_limit": "24Hrs Unlimited",
       "color": "red"
     }
+  ],
+  "product_category_2": [
+    {
+      "quota_limit": "",
+      "price": "500",
+      "duration_limit": "15days Unlimited",
+      "color": "purple"
+    },
+    {
+      "quota_limit": "",
+      "price": "700",
+      "duration_limit": "20days Unlimited",
+      "color": "black"
+    },
+    {
+      "quota_limit": "",
+      "price": "1500",
+      "duration_limit": "30days Unlimited",
+      "color": "red"
+    }
   ]
 }
